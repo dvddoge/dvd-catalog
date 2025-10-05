@@ -2,6 +2,7 @@ package com.dvddoge.dvdcatalog.resources;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dvddoge.dvdcatalog.dto.CategoryDTO;
 import com.dvddoge.dvdcatalog.entities.Category;
 import com.dvddoge.dvdcatalog.services.CategoryService;
 
@@ -21,8 +22,8 @@ public class CategoryResource {
     private CategoryService service;
 
     @GetMapping
-    public ResponseEntity<List<Category>> findAll() {
-        List<Category> categorias = service.findAll();
+    public ResponseEntity<List<CategoryDTO>> findAll() {
+        List<CategoryDTO> categorias = service.findAll();
         return ResponseEntity.ok().body(categorias);
     }
 }
