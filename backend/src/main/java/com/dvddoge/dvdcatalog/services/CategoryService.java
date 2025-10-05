@@ -8,12 +8,15 @@ import org.springframework.stereotype.Service;
 import com.dvddoge.dvdcatalog.entities.Category;
 import com.dvddoge.dvdcatalog.repositories.CategoryRepository;
 
+import org.springframework.transaction.annotation.Transactional;
+
 @Service
 public class CategoryService {
 
     @Autowired
     private CategoryRepository repository;
 
+    @Transactional(readOnly = true)
     public List<Category> findAll() {
         return repository.findAll();
     }
