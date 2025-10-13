@@ -1,16 +1,18 @@
 package com.dvddoge.dvdcatalog.dto;
 
 import java.io.Serializable;
+import java.time.Instant;
 
 import com.dvddoge.dvdcatalog.entities.Category;
 
-public class CategoryDTO implements Serializable{
+public class CategoryDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Long id;
     private String name;
 
-    public CategoryDTO() {}
+    public CategoryDTO() {
+    }
 
     public CategoryDTO(Category entity) {
         this.id = entity.getId();
