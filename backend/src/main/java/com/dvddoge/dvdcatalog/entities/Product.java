@@ -89,6 +89,14 @@ public class Product implements Serializable {
         this.imgUrl = imgUrl;
     }
 
+    public Instant getDate() {
+        return date;
+    }
+
+    public Set<Category> getCategorias() {
+        return categories;
+    }
+
     @PrePersist
     public void prePresist() {
         date = Instant.now();
