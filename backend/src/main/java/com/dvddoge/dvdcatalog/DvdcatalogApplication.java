@@ -9,5 +9,4 @@ public class DvdcatalogApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DvdcatalogApplication.class, args);
 	}
-
 }
